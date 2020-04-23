@@ -33,7 +33,6 @@ public class PersonController {
 
     @GetMapping(path = "{id}")
     public Person getPersonById(@PathVariable("id") UUID id){
-        System.out.println("gotHERE<<<<<<<<<<<<<<<<<");
         return personService.getPersonById(id)
                 .orElse(null);
     }
